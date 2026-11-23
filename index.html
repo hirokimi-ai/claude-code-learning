@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claude Code 学習リンク集</title>
+<style>
+  :root { --bg:#faf9f5; --card:#fff; --ink:#1f1e1d; --sub:#6b6a65; --accent:#c96442; --line:#e8e6dc; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#1f1e1d; --card:#2a2927; --ink:#f0eee6; --sub:#a8a69c; --line:#3a3936; } }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.6 -apple-system, "Hiragino Sans", sans-serif; }
+  main { max-width:880px; margin:0 auto; padding:32px 20px 64px; }
+  h1 { font-size:28px; margin:0 0 4px; }
+  .lead { color:var(--sub); margin:0 0 20px; }
+  nav { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:28px; }
+  nav a { font-size:14px; padding:4px 12px; border:1px solid var(--line); border-radius:999px; text-decoration:none; color:var(--ink); background:var(--card); }
+  section { margin-bottom:32px; }
+  h2 { font-size:20px; border-left:4px solid var(--accent); padding-left:10px; margin:0 0 6px; }
+  .note { color:var(--sub); font-size:14px; margin:0 0 12px; }
+  ul { list-style:none; padding:0; margin:0; display:grid; gap:8px; }
+  li { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:10px 14px; }
+  li a { color:var(--accent); font-weight:600; text-decoration:none; }
+  li a:hover { text-decoration:underline; }
+  li span { display:block; color:var(--sub); font-size:14px; }
+  .tag { display:inline-block; font-size:11px; padding:1px 7px; border-radius:4px; background:var(--line); color:var(--ink); margin-left:6px; vertical-align:2px; font-weight:400; }
+  .steps { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:14px 18px 14px 36px; }
+  .steps li { background:none; border:none; padding:2px 0; display:list-item; }
+  ol.steps { list-style:decimal; display:block; }
+  footer { color:var(--sub); font-size:13px; margin-top:40px; }
+</style>
+</head>
+<body>
+<main>
+<h1>Claude Code 学習リンク集</h1>
+<p class="lead">公式ドキュメント・動画・日本語記事・プラグイン・API をカテゴリ別にまとめました（2026年11月作成）。</p>
+
+<nav>
+  <a href="#route">おすすめ順</a><a href="#official">公式ドキュメント</a><a href="#course">無料コース</a>
+  <a href="#youtube">YouTube</a><a href="#ja">日本語記事</a><a href="#tips">Tips・ベストプラクティス</a>
+  <a href="#plugins">プラグイン・拡張</a><a href="#api">API・Agent SDK</a><a href="#github">GitHub まとめ</a>
+</nav>
+
+<section id="route">
+<h2>おすすめの学習順</h2>
+<ol class="steps">
+  <li>公式の<a href="https://code.claude.com/docs/ja/quickstart">クイックスタート（日本語）</a>で基本操作を体験</li>
+  <li>YouTube の入門動画（Tech With Tim や日本語の入門動画）で全体像をつかむ</li>
+  <li><a href="https://code.claude.com/docs/en/best-practices">公式ベストプラクティス</a>で CLAUDE.md・コンテキスト管理を学ぶ</li>
+  <li>Anthropic Academy の無料コース「Claude Code in Action」で体系的に</li>
+  <li>プラグイン・Skills・Hooks・MCP で自分用にカスタマイズ</li>
+  <li>API / Agent SDK で自分のアプリやエージェントを作る</li>
+</ol>
+</section>
+
+<section id="official">
+<h2>公式ドキュメント（Claude Code）</h2>
+<p class="note">最も正確で最新。URL の /ja/ を /en/ に変えると英語版になります。</p>
+<ul>
+  <li><a href="https://code.claude.com/docs/ja/overview">Claude Code 概要</a><span>何ができるか・対応環境（ターミナル / VS Code / JetBrains / デスクトップ / Web）</span></li>
+  <li><a href="https://code.claude.com/docs/ja/quickstart">クイックスタート</a><span>インストールから最初のタスクまで</span></li>
+  <li><a href="https://code.claude.com/docs/en/best-practices">ベストプラクティス</a><span>コンテキスト管理、CLAUDE.md、計画→実装の流れなど</span></li>
+  <li><a href="https://code.claude.com/docs/ja/memory">メモリ（CLAUDE.md）</a><span>プロジェクトのルールや知識を覚えさせる方法</span></li>
+  <li><a href="https://code.claude.com/docs/ja/commands">コマンド一覧</a><span>/init, /clear, /compact など</span></li>
+  <li><a href="https://code.claude.com/docs/ja/settings">設定（settings.json）</a><span>権限・環境変数・モデル設定</span></li>
+  <li><a href="https://code.claude.com/docs/ja/common-workflows">よく使うワークフロー</a><span>バグ修正、リファクタ、テスト、PR 作成など</span></li>
+  <li><a href="https://support.claude.com/en/articles/14554000-claude-code-power-user-tips">Power user tips（ヘルプセンター）</a><span>公式の上級者向け Tips</span></li>
+</ul>
+</section>
+
+<section id="course">
+<h2>無料コース</h2>
+<ul>
+  <li><a href="https://anthropic.skilljar.com/">Anthropic Academy</a><span class="tag">公式・無料</span><span>Claude Code 101、Claude Code in Action、API、MCP などのコース一覧（要サインアップ）</span></li>
+  <li><a href="https://anthropic.skilljar.com/claude-code-in-action">Claude Code in Action</a><span>Plan モード、Skills、Hooks、権限、ルーティン、プラグイン化まで体系的に</span></li>
+  <li><a href="https://github.com/anthropics/courses">anthropics/courses（GitHub）</a><span>API・プロンプトエンジニアリングの公式教材</span></li>
+</ul>
+</section>
+
+<section id="youtube">
+<h2>YouTube</h2>
+<ul>
+  <li><a href="https://www.youtube.com/@anthropic-ai">Anthropic 公式チャンネル</a><span>新機能紹介・公式解説</span></li>
+  <li><a href="https://www.youtube.com/watch?v=ntDIxaeo3Wg">Tech With Tim「Claude Code - Full Tutorial for Beginners」</a><span class="tag">英語</span><span>約36分。インストール、コマンド、プロンプト計画、Git 連携</span></li>
+  <li><a href="https://www.youtube.com/watch?v=amEUIuBKwvg">Cole Medin「Complete guide to Claude Code」</a><span class="tag">英語</span><span>実践的な使いこなしガイド</span></li>
+  <li><a href="https://www.freecodecamp.org/news/claude-code-full-course/">freeCodeCamp「Claude Code Full Course」</a><span class="tag">英語</span><span>長尺の総合講座（記事内に YouTube リンク）</span></li>
+  <li><a href="https://www.freecodecamp.org/news/claude-code-essentials-exampro/">freeCodeCamp × ExamPro「Claude Code Essentials」</a><span class="tag">英語</span><span>約12時間。MCP・Playwright・サブエージェントまで</span></li>
+  <li><a href="https://www.clauder-navi.com/claude-youtube-videos-2026-04/">Claude YouTube 厳選40本（日本語まとめ）</a><span class="tag">日本語</span><span>入門〜実践の日本語動画を目的別に整理</span></li>
+  <li><a href="https://www.youtube.com/results?search_query=Claude+Code+%E5%85%A5%E9%96%80">YouTube 検索：「Claude Code 入門」</a><span class="tag">日本語</span><span>AI大学など日本語の入門動画を探す</span></li>
+  <li><a href="https://www.youtube.com/results?search_query=Claude+Code+tips&sp=CAI%253D">YouTube 検索：「Claude Code tips」（新しい順）</a><span>最新の Tips 動画</span></li>
+  <li><a href="https://www.youtube.com/results?search_query=Claude+Code+plugins+skills+hooks">YouTube 検索：プラグイン・Skills・Hooks</a><span>拡張機能の解説動画</span></li>
+</ul>
+</section>
+
+<section id="ja">
+<h2>日本語の解説記事</h2>
+<ul>
+  <li><a href="https://dev.classmethod.jp/articles/get-started-claude-code-1/">クラスメソッド「Claude Codeを徹底解説してみた（前編）」</a><span>基本の網羅的解説（公開から時間が経っているので最新仕様は公式で確認）</span></li>
+  <li><a href="https://zenn.dev/shimada_ai/articles/ffea13e77e7580">Zenn：Claude Code 実践 Tips</a><span>実務での使い方のコツ</span></li>
+  <li><a href="https://shift-ai.co.jp/blog/55661/">SHIFT AI：Claude Code 機能解説</a><span>主要機能を初心者向けに</span></li>
+  <li><a href="https://zenn.dev/search?q=Claude%20Code">Zenn で「Claude Code」を検索</a><span>エンジニアの日本語記事が大量にあります</span></li>
+  <li><a href="https://qiita.com/search?q=Claude%20Code&sort=like">Qiita で「Claude Code」を検索（いいね順）</a><span>人気記事から読む</span></li>
+</ul>
+</section>
+
+<section id="tips">
+<h2>Tips・ベストプラクティス（英語）</h2>
+<ul>
+  <li><a href="https://www.anthropic.com/engineering/claude-code-best-practices">Anthropic Engineering「Best practices for agentic coding」</a><span>公式ブログの元記事（最新版は公式ドキュメント側）</span></li>
+  <li><a href="https://builder.io/blog/claude-code-tips-best-practices">Builder.io：Claude Code tips & best practices</a><span>実践 Tips 集</span></li>
+  <li><a href="https://builder.io/blog/how-to-use-claude-code">Builder.io：How to use Claude Code</a><span>使い方の全体像</span></li>
+  <li><a href="https://www.datacamp.com/tutorial/claude-code-best-practices">DataCamp：Claude Code best practices</a><span>チュートリアル形式</span></li>
+  <li><a href="https://colobu.com/2026/01/01/40+%20Claude%20Code%20Tips%EF%BC%9A%20From%20Basics%20to%20Advanced/">40+ Claude Code Tips: From Basics to Advanced</a><span>基本〜上級の Tips 40 個以上</span></li>
+</ul>
+</section>
+
+<section id="plugins">
+<h2>プラグイン・Skills・Hooks・MCP</h2>
+<ul>
+  <li><a href="https://code.claude.com/docs/ja/discover-plugins">プラグインを探す・インストール</a><span class="tag">公式</span><span>/plugin コマンド、マーケットプレイスの追加方法</span></li>
+  <li><a href="https://code.claude.com/docs/ja/plugins">プラグインを作る</a><span class="tag">公式</span><span>Skills・エージェント・Hooks・MCP をまとめて配布</span></li>
+  <li><a href="https://code.claude.com/docs/en/plugins-reference">プラグインリファレンス</a><span class="tag">公式</span><span>plugin.json などの仕様</span></li>
+  <li><a href="https://github.com/anthropics/claude-plugins-official">claude-plugins-official（公式マーケットプレイス）</a><span>/plugin marketplace add anthropics/claude-plugins-official</span></li>
+  <li><a href="https://code.claude.com/docs/ja/skills">Skills（エージェントスキル）</a><span class="tag">公式</span><span>手順や知識をパッケージ化して呼び出す</span></li>
+  <li><a href="https://code.claude.com/docs/ja/hooks-guide">Hooks ガイド</a><span class="tag">公式</span><span>編集後に自動フォーマットなど、決まった処理を自動実行</span></li>
+  <li><a href="https://code.claude.com/docs/ja/sub-agents">サブエージェント</a><span class="tag">公式</span><span>専門エージェントに作業を分担</span></li>
+  <li><a href="https://code.claude.com/docs/ja/mcp">MCP（外部ツール連携）</a><span class="tag">公式</span><span>GitHub・DB・ブラウザ等と接続</span></li>
+  <li><a href="https://modelcontextprotocol.io/">Model Context Protocol 公式サイト</a><span>MCP の仕様とサーバー一覧</span></li>
+  <li><a href="https://www.anthropic.com/news/claude-code-plugins">Anthropic ニュース：Claude Code plugins</a><span>プラグイン機能の紹介記事</span></li>
+  <li><a href="https://www.datacamp.com/tutorial/how-to-build-claude-code-plugins">DataCamp：How to build Claude Code plugins</a><span>プラグイン自作チュートリアル</span></li>
+</ul>
+</section>
+
+<section id="api">
+<h2>Claude API・Agent SDK</h2>
+<ul>
+  <li><a href="https://platform.claude.com/docs">Claude API ドキュメント</a><span class="tag">公式</span><span>Messages API、ツール使用、プロンプトキャッシュ、モデル一覧・料金</span></li>
+  <li><a href="https://platform.claude.com/">Claude Console</a><span>API キーの発行・使用量確認</span></li>
+  <li><a href="https://code.claude.com/docs/ja/agent-sdk/overview">Agent SDK 概要（日本語）</a><span class="tag">公式</span><span>Claude Code と同じエージェントループを Python / TypeScript から</span></li>
+  <li><a href="https://code.claude.com/docs/ja/agent-sdk/quickstart">Agent SDK クイックスタート</a><span class="tag">公式</span><span>バグを見つけて直すエージェントを作る例</span></li>
+  <li><a href="https://code.claude.com/docs/ja/headless">ヘッドレスモード（claude -p）</a><span>スクリプトや CI から Claude Code を使う</span></li>
+  <li><a href="https://code.claude.com/docs/ja/github-actions">GitHub Actions 連携</a><span>PR やイシューで Claude を動かす</span></li>
+  <li><a href="https://github.com/anthropics/claude-cookbooks">Claude Cookbooks（GitHub）</a><span>API のサンプルコード集</span></li>
+</ul>
+</section>
+
+<section id="github">
+<h2>GitHub まとめ・コミュニティ</h2>
+<ul>
+  <li><a href="https://github.com/anthropics/claude-code">anthropics/claude-code</a><span>公式リポジトリ（Issue・CHANGELOG で最新情報）</span></li>
+  <li><a href="https://github.com/hesreallyhim/awesome-claude-code">awesome-claude-code</a><span>コマンド・ツール・ワークフローの定番まとめ</span></li>
+  <li><a href="https://github.com/shanraisshan/claude-code-best-practice">claude-code-best-practice</a><span>人気のベストプラクティス集</span></li>
+  <li><a href="https://github.com/zebbern/claude-code-guide">claude-code-guide</a><span>コマンドリファレンスと例</span></li>
+  <li><a href="https://www.reddit.com/r/ClaudeAI/">Reddit r/ClaudeAI</a><span>ユーザーの活用事例・Q&amp;A</span></li>
+</ul>
+</section>
+
+<footer>サードパーティの記事は情報が古い場合があります。コマンドや料金は公式ドキュメントで確認してください。</footer>
+</main>
+</body>
+</html>
