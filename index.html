@@ -36,7 +36,7 @@
 <nav>
   <a href="#route">おすすめ順</a><a href="#official">公式ドキュメント</a><a href="#course">無料コース</a>
   <a href="#youtube">YouTube</a><a href="#ja">日本語記事</a><a href="#tips">Tips・ベストプラクティス</a>
-  <a href="#plugins">プラグイン・拡張</a><a href="#api">API・Agent SDK</a><a href="#github">GitHub まとめ</a>
+  <a href="#plugins">プラグイン・拡張</a><a href="#api">API・Agent SDK</a><a href="#bloggers">有名ブロガーのTips</a><a href="#agents">AIエージェントを作る</a><a href="#github">GitHub まとめ</a>
 </nav>
 
 <section id="route">
@@ -47,7 +47,8 @@
   <li><a href="https://code.claude.com/docs/en/best-practices">公式ベストプラクティス</a>で CLAUDE.md・コンテキスト管理を学ぶ</li>
   <li>Anthropic Academy の無料コース「Claude Code in Action」で体系的に</li>
   <li>プラグイン・Skills・Hooks・MCP で自分用にカスタマイズ</li>
-  <li>API / Agent SDK で自分のアプリやエージェントを作る</li>
+  <li>有名ブロガーの使い方を真似して自分の型を作る</li>
+  <li>「AIエージェントを作る」の順番で、自分のエージェントを作る</li>
 </ol>
 </section>
 
@@ -139,6 +140,42 @@
   <li><a href="https://code.claude.com/docs/ja/headless">ヘッドレスモード（claude -p）</a><span>スクリプトや CI から Claude Code を使う</span></li>
   <li><a href="https://code.claude.com/docs/ja/github-actions">GitHub Actions 連携</a><span>PR やイシューで Claude を動かす</span></li>
   <li><a href="https://github.com/anthropics/claude-cookbooks">Claude Cookbooks（GitHub）</a><span>API のサンプルコード集</span></li>
+</ul>
+</section>
+
+<section id="bloggers">
+<h2>有名ブロガー・開発者の Tips</h2>
+<p class="note">実際に毎日使っている人たちの使い方。英語記事が多いので Safari の翻訳機能（アドレスバーの「ぁあ」→ 翻訳）が便利です。</p>
+<ul>
+  <li><a href="https://www.infoq.com/news/2026/01/claude-code-creator-workflow">Boris Cherny（Claude Code 生みの親）のワークフロー</a><span class="tag">英語</span><span>5つのセッションを並列で動かす、CLAUDE.md をチームで育てる、Hooks で自動整形、音声入力など（InfoQ のまとめ記事）</span></li>
+  <li><a href="https://claude.com/ja/resources/articles/how-anthropic-teams-use-claude-code">Anthropic チームによる Claude Code の活用方法</a><span class="tag">日本語</span><span>Anthropic 社内の各チームの使い方（公式）</span></li>
+  <li><a href="https://simonwillison.net/tags/claude-code/">Simon Willison のブログ（claude-code タグ）</a><span class="tag">英語</span><span>AI × プログラミングで最も有名なブロガーの一人。新機能をいち早く試して解説</span></li>
+  <li><a href="https://simonwillison.net/2026/Feb/23/agentic-engineering-patterns/">Simon Willison「Agentic Engineering Patterns」</a><span class="tag">英語</span><span>コーディングエージェントを使いこなすためのパターン集</span></li>
+  <li><a href="https://simonwillison.net/2025/Sep/30/designing-agentic-loops">Simon Willison「Designing agentic loops」</a><span class="tag">英語</span><span>エージェントに安全に自走させる仕組みの作り方</span></li>
+  <li><a href="https://lucumr.pocoo.org/2025/6/12/agentic-coding/">Armin Ronacher「Agentic Coding Recommendations」</a><span class="tag">英語</span><span>Flask 作者による実践的な推奨事項（シンプルな言語・ツール選びなど）</span></li>
+  <li><a href="https://lucumr.pocoo.org/2025/12/22/a-year-of-vibes/">Armin Ronacher「A Year of Vibes」</a><span class="tag">英語</span><span>エージェントで1年開発した振り返り</span></li>
+  <li><a href="https://harper.blog/2025/02/16/my-llm-codegen-workflow-atm/">Harper Reed「My LLM codegen workflow atm」</a><span class="tag">英語</span><span>アイデア→仕様→計画→実装の流れが参考になる定番記事</span></li>
+  <li><a href="https://zenn.dev/search?q=Claude%20Code&order=liked">Zenn「Claude Code」いいね順</a><span class="tag">日本語</span><span>日本のエンジニアの人気記事を新しい知見順に</span></li>
+</ul>
+</section>
+
+<section id="agents">
+<h2>AIエージェントを自分で作る</h2>
+<p class="note">おすすめ順：① 考え方（Anthropic の記事）→ ② 最小のエージェントを作って仕組みを理解 → ③ Agent SDK で本格的に → ④ MCP・独自ツールで機能を足す</p>
+<ul>
+  <li><a href="https://www.anthropic.com/engineering/building-effective-agents">① Building effective agents（Anthropic）</a><span class="tag">必読</span><span>「ワークフロー」と「エージェント」の違い、よく使う設計パターン。まずはこれ</span></li>
+  <li><a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents">① Effective context engineering for AI agents（Anthropic）</a><span>エージェントに何をどれだけ見せるか＝コンテキスト設計</span></li>
+  <li><a href="https://www.anthropic.com/engineering/writing-tools-for-agents">① Writing effective tools for agents（Anthropic）</a><span>エージェントが使いやすいツールの作り方</span></li>
+  <li><a href="https://ampcode.com/how-to-build-an-agent">② Thorsten Ball「How to Build an Agent」</a><span class="tag">英語</span><span>約400行でコーディングエージェントを自作。エージェントの正体（LLM＋ツール＋ループ）が腹落ちする</span></li>
+  <li><a href="https://claude.com/ja/resources/articles/building-agents-with-the-claude-agent-sdk">③ Building agents with the Claude Agent SDK</a><span class="tag">日本語</span><span>Agent SDK でどんなエージェントが作れるかの全体像</span></li>
+  <li><a href="https://code.claude.com/docs/ja/agent-sdk/quickstart">③ Agent SDK クイックスタート</a><span class="tag">公式</span><span>Python / TypeScript で最初のエージェントを動かす</span></li>
+  <li><a href="https://github.com/anthropics/claude-agent-sdk-demos">③ claude-agent-sdk-demos（GitHub）</a><span>公式のサンプルエージェント集</span></li>
+  <li><a href="https://code.claude.com/docs/ja/agent-sdk/custom-tools">④ カスタムツール</a><span class="tag">公式</span><span>自分の関数をエージェントのツールにする</span></li>
+  <li><a href="https://code.claude.com/docs/ja/agent-sdk/mcp">④ Agent SDK で MCP を使う</a><span class="tag">公式</span><span>外部サービスとつなぐ</span></li>
+  <li><a href="https://modelcontextprotocol.io/docs/getting-started/intro">④ MCP 入門（公式サイト）</a><span>自分で MCP サーバーを作る方法も</span></li>
+  <li><a href="https://anthropic.skilljar.com/">Anthropic Academy（API・MCP のコース）</a><span class="tag">無料</span><span>Building with the Claude API、Introduction to MCP など</span></li>
+  <li><a href="https://huggingface.co/learn/agents-course">Hugging Face AI Agents Course</a><span class="tag">無料</span><span>特定のモデルに依存しないエージェントの基礎講座</span></li>
+  <li><a href="https://zenn.dev/search?q=Agent%20SDK">Zenn で「Agent SDK」を検索</a><span class="tag">日本語</span><span>日本語の作ってみた記事</span></li>
 </ul>
 </section>
 
