@@ -25,6 +25,12 @@
   .steps { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:14px 18px 14px 36px; }
   .steps li { background:none; border:none; padding:2px 0; display:list-item; }
   ol.steps { list-style:decimal; display:block; }
+  .glossary { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:6px 16px; margin:12px 0 0; }
+  .glossary div { padding:8px 0; border-bottom:1px solid var(--line); }
+  .glossary div:last-child { border-bottom:none; }
+  .glossary dt { font-weight:700; display:inline; }
+  .glossary dd { display:inline; margin:0 0 0 8px; color:var(--sub); }
+  h3 { font-size:16px; margin:18px 0 8px; }
   footer { color:var(--sub); font-size:13px; margin-top:40px; }
 </style>
 </head>
@@ -34,10 +40,78 @@
 <p class="lead">公式ドキュメント・動画・日本語記事・プラグイン・API をカテゴリ別にまとめました（2026年11月作成）。</p>
 
 <nav>
-  <a href="#route">おすすめ順</a><a href="#official">公式ドキュメント</a><a href="#course">無料コース</a>
+  <a href="#beginner">初心者の準備</a><a href="#easy-videos">噛み砕き動画</a><a href="#route">おすすめ順</a><a href="#official">公式ドキュメント</a><a href="#course">無料コース</a>
   <a href="#youtube">YouTube</a><a href="#ja">日本語記事</a><a href="#tips">Tips・ベストプラクティス</a>
   <a href="#plugins">プラグイン・拡張</a><a href="#api">API・Agent SDK</a><a href="#bloggers">有名ブロガーのTips</a><a href="#agents">AIエージェントを作る</a><a href="#github">GitHub まとめ</a>
 </nav>
+
+<section id="beginner">
+<h2>プログラミング初心者向けの準備</h2>
+<p class="note">Claude Code は日本語で頼むだけでも使えます。ただ、下の3つ（ターミナル・Git・Python）を少し知っておくと、つまずきが大きく減ります。わからない言葉は Claude にそのまま「〇〇ってなに？」と聞くのが一番早いです。</p>
+
+<h3>まずはこれ（1〜2時間でOK）</h3>
+<ul>
+  <li><a href="https://anthropic.skilljar.com/claude-code-101">Claude Code 101（Anthropic Academy）</a><span class="tag">公式・無料</span><span>Claude Code のいちばん最初の公式入門コース</span></li>
+  <li><a href="https://minto.tech/mac-terminal-beginners-guide/">Mac ターミナル入門（初心者向け）</a><span class="tag">日本語</span><span>「黒い画面」の開き方、cd・ls などの基本コマンド、パスの考え方</span></li>
+  <li><a href="https://tech-camp.in/note/technology/18730/">ターミナルとは？（TECH CAMP）</a><span class="tag">日本語</span><span>そもそもターミナルが何なのかをやさしく解説</span></li>
+</ul>
+
+<h3>Git（変更履歴の管理）</h3>
+<ul>
+  <li><a href="https://backlog.com/ja/git-tutorial/">サルでもわかる Git 入門</a><span class="tag">日本語</span><span>イラスト付きで Git の考え方を解説する定番サイト。Claude が「コミットしました」と言ったときの意味がわかるようになります</span></li>
+</ul>
+
+<h3>Python（AIエージェント作りに必要）</h3>
+<ul>
+  <li><a href="https://prog-8.com/">Progate</a><span class="tag">日本語・一部無料</span><span>ブラウザだけでスライド＋演習。最初の一歩に最適。Python・Git・コマンドラインのコースあり</span></li>
+  <li><a href="https://dotinstall.com/">ドットインストール</a><span class="tag">日本語・一部無料</span><span>3分動画でサクサク学べる</span></li>
+  <li><a href="https://www.youtube.com/@kinocode">キノコード（YouTube）</a><span class="tag">日本語</span><span>Python 入門の動画がとても丁寧</span></li>
+  <li><a href="https://www.youtube.com/@shimabu_it">しまぶーのIT大学（YouTube）</a><span class="tag">日本語</span><span>プログラミングの基礎を初心者向けに解説</span></li>
+  <li><a href="https://www.freecodecamp.org/japanese/news/learn-python-full-course-for-beginners-japanese/">freeCodeCamp 日本語版「Python 入門」</a><span class="tag">日本語・無料</span><span>環境構築から基本文法、クラスまで通しで学べる講座</span></li>
+  <li><a href="https://docs.python.org/ja/3/tutorial/">Python 公式チュートリアル（日本語）</a><span>Progate などの後に、辞書代わりに</span></li>
+</ul>
+
+<h3>よく出てくる用語ミニ辞典</h3>
+<dl class="glossary">
+  <div><dt>ターミナル</dt><dd>文字でパソコンに命令する画面。Claude Code の CLI 版はここで動く</dd></div>
+  <div><dt>コマンド</dt><dd>ターミナルに打ち込む命令（例：ls＝ファイル一覧、cd＝フォルダ移動）</dd></div>
+  <div><dt>ディレクトリ / パス</dt><dd>ディレクトリ＝フォルダ。パス＝ファイルの住所（例：/Users/名前/claude）</dd></div>
+  <div><dt>リポジトリ</dt><dd>Git で管理されているプロジェクトのフォルダ。GitHub に置くとネット上で共有できる</dd></div>
+  <div><dt>コミット / プッシュ</dt><dd>コミット＝変更をセーブポイントとして記録。プッシュ＝それを GitHub に送る</dd></div>
+  <div><dt>CLAUDE.md</dt><dd>Claude に毎回読ませるメモ。「このプロジェクトのルール」を書いておくファイル</dd></div>
+  <div><dt>プロンプト</dt><dd>AI への指示文</dd></div>
+  <div><dt>コンテキスト</dt><dd>AI がいま覚えている会話や情報の量。いっぱいになると性能が落ちるので /clear でリセット</dd></div>
+  <div><dt>API / API キー</dt><dd>プログラムから AI を呼び出す窓口と、そのための合言葉（パスワード）。人に見せてはいけない</dd></div>
+  <div><dt>MCP</dt><dd>Claude を外部サービス（GitHub、Slack、データベースなど）とつなぐための共通規格</dd></div>
+  <div><dt>プラグイン / スキル / Hooks</dt><dd>Claude Code の拡張機能。スキル＝手順書、Hooks＝決まったタイミングで自動実行する処理、プラグイン＝それらの詰め合わせ</dd></div>
+  <div><dt>エージェント</dt><dd>AI が自分で考えて道具（ツール）を使い、ゴールまで繰り返し作業する仕組み</dd></div>
+  <div><dt>SDK</dt><dd>プログラムを作るための部品セット。Agent SDK ＝ エージェントを作る部品セット</dd></div>
+</dl>
+</section>
+
+<section id="easy-videos">
+<h2>噛み砕いて説明している YouTube 動画（日本語・非エンジニア向け）</h2>
+<p class="note">難しい用語をなるべく使わずに説明している動画を集めました。上から順に見るのがおすすめです。</p>
+<h3>まず全体像をつかむ</h3>
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=4NDb-X624gY">【初心者】Claude Codeの全体像がたった9分で丸分かり！</a><span class="tag">SHIFT AI ニュース</span><span>9分で「何ができるか」をざっくり把握</span></li>
+  <li><a href="https://www.youtube.com/watch?v=osNtatnChXk">【脱初心者】Claude Code入門｜非エンジニアが最初に覚えること</a><span class="tag">Yuta | AIと暮らす</span><span>デスクトップアプリで始める。普通のチャットAIとの違い、押さえるべき7つの概念</span></li>
+  <li><a href="https://www.youtube.com/watch?v=8p8hTE_1xW4">【完全ガイド】非エンジニアのためのClaude Codeの始め方と使い方</a><span class="tag">とうまろ</span><span>デスクトップアプリでの使い方。ターミナルが不安な人向け</span></li>
+</ul>
+<h3>導入・設定をじっくり</h3>
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=ZIf_RdwL-LA">【非エンジニア向け】Claude Codeの設定・使い方徹底解説【Mac/Windows対応】</a><span class="tag">AI業務ハックチャンネル</span><span>インストールから丁寧に。目次から必要な所だけ見られる</span></li>
+  <li><a href="https://www.youtube.com/watch?v=ufy4AukV1aM">Claude Code入門講座｜非エンジニアでも分かる使い方ガイド【2026年最新版】</a><span class="tag">せお丸</span><span>約2時間の通し講座</span></li>
+  <li><a href="https://www.youtube.com/watch?v=9kowF4sazeM">非エンジニアのためのClaude Code設定13選</a><span class="tag">AI氣道</span><span>まず変えるべき3つの設定から</span></li>
+  <li><a href="https://www.youtube.com/watch?v=QWKuvNUIQL0">【保存版】初心者向けClaudeCode入門講座</a><span class="tag">チャエン</span><span>初期設定、Claude・Cowork との使い分け、Skill・MCP まで</span></li>
+</ul>
+<h3>実際に何か作ってみる</h3>
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=dIPuTotXiq0">非エンジニア向け！超簡単！Claude Code入門②〜社内システム自作編</a><span class="tag">ベイジTV</span><span>専門用語をなるべく使わず、実際にシステムを作る様子を見せてくれる</span></li>
+  <li><a href="https://www.youtube.com/watch?v=0u6w5RBHsdI">【Claude Code完全解説】非エンジニアでも爆速で業務自動化！</a><span class="tag">MarketingX</span><span>仕事の自動化の実例</span></li>
+  <li><a href="https://www.youtube.com/watch?v=KjiUbczvez0">非エンジニアOK！スキル・エージェントチームをゼロから理解しよう</a><span class="tag">アキユキ</span><span>スキルとエージェントの考え方。エージェント作りへの橋渡しに</span></li>
+</ul>
+</section>
 
 <section id="route">
 <h2>おすすめの学習順</h2>
